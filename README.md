@@ -37,3 +37,35 @@ http://localhost:5000/weather/daily/description?lat=55.19&lon=30.20&date=12.07.2
   "description":"light rain"  
 }
 ```
+
+# GraphQL
+
+## GraphQL Sandbox
+
+http://localhost:5000/graphql
+
+## Example of Query
+
+```graphql
+{
+  weatherDescription(
+    lat: 55.19,
+    lon: 30.20,
+    date: "12.07.2022"
+  ){
+    description
+  }
+}
+```
+
+## Example of Response
+
+```graphql
+{
+  "data": {
+    "weatherDescription": {
+      "description": "light rain"
+    }
+  }
+}
+```

@@ -1,0 +1,11 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type WeatherDescription {
+  description: String!
+}
+
+type Query {
+  weatherDescription(lat: Float!, lon: Float!, date: String!): WeatherDescription!
+}

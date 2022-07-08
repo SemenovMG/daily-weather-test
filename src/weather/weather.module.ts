@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { WeatherService } from './application/services';
 import { DateProvider } from './application/utils';
 import { OneWeekDateValidator } from './application/validators';
+import { WeatherDescriptionResolver } from './graphql/resolvers';
 import { OpenWeatherMapProvider } from './infrastructure/weather-providers/one-weather';
 import { WeatherController } from './rest-api/weather.controller';
 
@@ -26,6 +27,7 @@ import { WeatherController } from './rest-api/weather.controller';
       provide: 'IDateValidator',
       useClass: OneWeekDateValidator,
     },
+    WeatherDescriptionResolver,
   ],
 })
 export class WeatherModule {}
